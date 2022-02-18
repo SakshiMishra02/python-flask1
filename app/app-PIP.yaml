@@ -1,0 +1,11 @@
+#app.yaml
+runtime: python37
+
+env_variables:
+  CLOUD_SQL_USERNAME: sakshimishra2
+  CLOUD_SQL_PASSWORD: sakshi
+  CLOUD_SQL_DATABASE_NAME: user
+  CLOUD_SQL_CONNECTION_NAME: stunning-hull-336007:us-central1:webpage-sample-1
+
+vpc_access_connector:
+  name: "projects/youtube-demo-255723/locations/us-central1/connectors/connect-to-sql"
