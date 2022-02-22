@@ -1,13 +1,10 @@
 
-# syntax=docker/dockerfile:1
+FROM python:3.7
 
-FROM python:3.8-slim-buster
-
+RUN mkdir /app
 WORKDIR /app
+ADD . /app/
+RUN pip install -r requirements.txt
 
-COPY requirements.txt 
-RUN pip3 install -r requirements.txt
-
-COPY /app .
-
-CMD [ "python", "main.py"]
+EXPOSE 5000
+CMD ["python", "/app/main.py"]
