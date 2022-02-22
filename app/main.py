@@ -1,6 +1,6 @@
 import os 
 
-from flask import Flask, jsonify, request, redirect, url_for, render_template
+from flask import Flask, request, redirect, url_for, render_template
 import pymysql
 
 db_user= os.environ.get('CLOUD_SQL_USERNAME')
@@ -93,4 +93,4 @@ def home():
 
 
 if __name__ == '__main__':
-    app.run(host='127.0.0.1', port=8080, debug=True)
+    app.run(debug=True)
